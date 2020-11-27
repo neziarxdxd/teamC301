@@ -1,3 +1,18 @@
-export const plusSlides = (n)=>{
-    console.log(5*n)
+import React, {useState,useEffect} from 'react';
+function PlusSign({match}) {
+    useEffect(()=>{
+        fetchItem();
+        
+    },[]);
+    const [item,setItem]= useState({});
+    const fetchItem= async()=>{
+        const fetchItem=await fetch(
+            ``
+        );
+
+    }
+    console.log(match)
+
+    
 }
+export default PlusSign

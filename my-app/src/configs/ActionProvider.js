@@ -1,4 +1,4 @@
-import {plusSlides}from './WikipediaAPI';
+import PlusSign from './WikipediaAPI';
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc, createClientMessage) {
       this.createChatBotMessage = createChatBotMessage;
@@ -11,7 +11,7 @@ class ActionProvider {
         const message = this.createChatBotMessage("How can I help?"+name, {
           withAvatar: true,
         });
-        plusSlides(5);
+        PlusSign(5);
         this.addMessageToBotState(message)
       };
       //
