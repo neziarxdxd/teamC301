@@ -11,9 +11,7 @@ class ActionProvider {
     wikiSend=(name)=>{
        fetch('https://api.dictionaryapi.dev/api/v2/entries/en/hello').then(res => res.json()).then(json =>  this.addMessageToBotState(this.createChatBotMessage(
         json[0]["meanings"][0]["definitions"][0]["definition"]
-       )));
-      
-      
+       )));     
       
     }
     
