@@ -1,11 +1,15 @@
+
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc, createClientMessage) {
       this.createChatBotMessage = createChatBotMessage;
       this.setState = setStateFunc;
       this.createClientMessage = createClientMessage;
     }
-    handleDefault = () => {
-        const message = this.createChatBotMessage("How can I help?", {
+
+    wikiPediaBot()
+
+    handleDefault = (name) => {
+        const message = this.createChatBotMessage("How can I help?"+name, {
           withAvatar: true,
         });
     

@@ -18,7 +18,7 @@ class MessageParser {
       ) {
         return this.actionProvider.handleMessageParser();
       }
-      return this.actionProvider.handleDefault();
+      return this.actionProvider.handleDefault(message);
     };
   }
   
