@@ -11,16 +11,16 @@ class MessageParser {
   
     parse = (message) => {
       const lowerCase = message.toLowerCase();
-  
-      if (
-        lowerCase.includes("messageparser") ||
-        lowerCase.includes("parse") ||
-        lowerCase.includes("parser") ||
-        lowerCase.includes("message parser")
-      ) {
+      // para sa wikipedia ito
+      if (lowerCase.includes("/wiki")) {
         return this.actionProvider.handleMessageParser();
       }
-      return this.actionProvider.wikiSend("dfkdfkd");
+      else if (lowerCase.includes("/wiki")) {
+        return this.actionProvider.handleMessageParser();
+      }
+      else{
+      return this.actionProvider.wikiSend(lowerCase);
+      }
     };
   }
   
