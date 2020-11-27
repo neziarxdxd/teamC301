@@ -4,7 +4,7 @@ const config = {
   initialMessages: [createChatBotMessage(`Hello world`,{
     widget:'wiki'
   })],
-  botName: "Ang cute ko",
+  botName: "chatbot",
   states:{
     todos:[]
   },

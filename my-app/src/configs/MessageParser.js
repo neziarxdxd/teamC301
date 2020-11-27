@@ -6,6 +6,8 @@ class MessageParser {
       // inside the messageParser
       this.state = state
     }
+
+
   
     parse = (message) => {
       const lowerCase = message.toLowerCase();
@@ -18,7 +20,7 @@ class MessageParser {
       ) {
         return this.actionProvider.handleMessageParser();
       }
-      return this.actionProvider.handleDefault(message);
+      return this.actionProvider.wikiSend("dfkdfkd");
     };
   }
   
