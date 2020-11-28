@@ -8,16 +8,28 @@ class ActionProvider {
       this.createClientMessage = createClientMessage;
     }
 
-    wikiSend=(name)=>{
+    dictionarySend=(word)=>{
        fetch('https://api.dictionaryapi.dev/api/v2/entries/en/hello').then(res => res.json()).then(json =>  this.addMessageToBotState(this.createChatBotMessage(
         json[0]["meanings"][0]["definitions"][0]["definition"]
        )));     
       
     }
-    
 
-    
-    
+    wikiSend=(word)=>{
+      
+      fetch( `https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&formatversion=2&exintro&explaintext&redirects=1&titles=Stack%20Overflow `).then(res => res.json()).then(json =>
+      {
+        let getData = json["query"]["pages"]
+      
+      let keys = Object.keys(getData)
+      
+      this.addMessageToBotState(this.createChatBotMessage(getData[keys]["extract"]))
+      }
+      )
+     
+   }
+
+
 
 
     handleDefault = (name) => {
@@ -30,7 +42,7 @@ class ActionProvider {
         
         this.addMessageToBotState(message)
       };
-      //
+      // this will add the component 
       addMessageToBotState = (messages) => {
         if (Array.isArray(messages)) {
           this.setState((state) => ({
