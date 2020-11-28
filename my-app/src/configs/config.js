@@ -4,7 +4,8 @@ const config = {
   initialMessages: [createChatBotMessage(`Hello world`,{
     widget:'wiki'
   })],
-  botName: "chatbot",
+  botName: "sparky",
+  botAvatar:"S"
 
 
 }

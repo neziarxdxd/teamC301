@@ -8,9 +8,18 @@ class ActionProvider {
     }
 
     dictionarySend=(word)=>{
-       fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`).then(res => res.json()).then(json =>  this.addMessageToBotState(this.createChatBotMessage(
-        json[0]["meanings"][0]["definitions"][0]["definition"]
-       )));     
+       fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`).then(res => res.json()).then(json =>{
+       
+       json[0]["meanings"].map((meaning,index) =>{ 
+        this.addMessageToBotState(this.createChatBotMessage(`Parts of Speech:${meaning.partOfSpeech}
+        ===============
+        Definitions: ${meaning.definitions[0].definition}
+       
+        `)) 
+      
+        return meaning
+      })}
+       );     
       
     }
 
