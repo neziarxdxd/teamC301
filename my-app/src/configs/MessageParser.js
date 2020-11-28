@@ -10,17 +10,26 @@ class MessageParser {
 
   
     parse = (message) => {
-      const lowerCase = message.toLowerCase();
+      const commandLetter = message.toLowerCase().substring(0,2);
+      const searchLetter = message.substring(3, message.length).replace(/\s+/g, ' ').trim();
       // para sa wikipedia ito
-      if (lowerCase.includes("word")) {
-        return this.actionProvider.handleMessageParser();
+      if(commandLetter===`/d`){
+        console.log(searchLetter)
+        return this.actionProvider.dictionarySend(searchLetter);
       }
-      else if (lowerCase.includes("word")) {
-        return this.actionProvider.handleMessageParser();
+      else if (commandLetter===`/w`){
+        console.log(searchLetter);
+        return this.actionProvider.wikiSend(searchLetter);
+
       }
       else{
-      return this.actionProvider.wikiSend(lowerCase);
+        console.log(searchLetter)
+        return this.actionProvider.defaultMessage();
+        
       }
+     
+      
+     
     };
   }
   
