@@ -1,15 +1,15 @@
 .App{
     
-    height: 100%;
-    border: 3px solid green;
-    text-align: center;
-  
-
+    display: flex;
+    max-width: 1024px;
+    margin: 0 auto;
+    justify-content: space-evenly;
 }
 
 .react-chatbot-kit-chat-container{
     background-color: aliceblue;
+    
 }
 .react-chatbot-kit-chat-bot-message{
-    margin-left: 3%;
+    
 }
