@@ -11,8 +11,8 @@ html,body{
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-.nav-link .navbar-brand{
-	color: white !important;
+.font-color1{
+	color: #fff!important;
 }
 .navbar-brand{
 	font-size: 3vw !important;
@@ -44,7 +44,6 @@ p{
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	align-items: center;
-	display: flex;
 }
 input[type="text"]{
 	width: 25vw;
