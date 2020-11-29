@@ -7,7 +7,7 @@ Open your terminal and then type
 $ git clone 
 This clones the repo ```https://github.com/zenraiching/teamC301 ```
 
-```cd myapp ```  into the new folder and type
+```cd sparky-app```  into the new folder and type
 
 $ npm install
 
