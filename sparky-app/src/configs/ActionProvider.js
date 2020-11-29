@@ -38,7 +38,9 @@ class ActionProvider {
    }
 
    defaultMessage = () =>{
-    const message = this.createChatBotMessage("Please try again", {
+    const message = this.createChatBotMessage(`/w for Wikipedia Seach \n /d for Dictionary Search
+    \n  Example: /d hello
+    `, {
       withAvatar: true,
     });
     
