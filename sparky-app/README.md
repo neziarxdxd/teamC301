@@ -1,6 +1,23 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## HOW TO INSTALL 
+Open your terminal and then type
+
+$ git clone 
+This clones the repo ```https://github.com/zenraiching/teamC301 ```
+
+```cd myapp ```  into the new folder and type
+
+$ npm install
+
+**This installs the required dependencies**
+
+To run the React project.
+$ npm start
+
+You are done! Now you can start editing the React project in the new folder that's created.
+
 
 ## Available Scripts
 
